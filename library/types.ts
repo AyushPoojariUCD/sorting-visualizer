@@ -3,7 +3,11 @@ export type SortingAlgorithmType =
   | "insertion"
   | "selection"
   | "merge"
-  | "quick";
+  | "quick"
+  | "heap"
+  | "counting"
+  | "shell"
+  | "radix";
 
 export type AlgorithmInfo = {
   title: string;

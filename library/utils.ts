@@ -2,7 +2,12 @@ import { generateSelectionSortAnimationArray } from "@/algorithms/selectionSort"
 import { generateBubbleSortAnimationArray } from "@/algorithms/bubbleSort";
 import { generateInsertionSortAnimationArray } from "@/algorithms/insertionSort";
 import { generateMergeSortAnimationArray } from "@/algorithms/mergeSort";
-import { generateQuickSortAnimationArray } from "@/algorithms/quickSort";
+import { generateQuickSortAnimationArray} from "@/algorithms/quickSort";
+import { generateShellSortAnimationArray } from "@/algorithms/shellSort";
+import { generateCountingSortAnimationArray } from "@/algorithms/countingSort";
+import { generateRadixSortAnimationArray } from "@/algorithms/radixSort";
+import { generateHeapSortAnimationArray } from "@/algorithms/heapSort";
+
 
 import { SortingAlgorithmType } from "./types";
 
@@ -19,6 +24,10 @@ export const algorithmOptions = [
   { label: "Merge", value: "merge" },
   { label: "Insertion", value: "insertion" },
   { label: "Selection", value: "selection" },
+  { label: "Heap", value: "heap" },
+  { label: "Shell", value: "shell" },
+  { label: "Counting", value: "counting" },
+  { label: "Radix", value: "radix" },
 ];
 
 export function generateAnimationArray(
@@ -42,6 +51,18 @@ export function generateAnimationArray(
       break;
     case "quick":
       generateQuickSortAnimationArray(isSorting, array, runAnimation);
+      break;
+    case "heap":
+      generateHeapSortAnimationArray(isSorting, array, runAnimation);
+      break;
+    case "shell":
+      generateShellSortAnimationArray(isSorting, array, runAnimation);
+      break;
+    case "counting":
+      generateCountingSortAnimationArray(isSorting, array, runAnimation);
+      break;
+    case "radix":
+      generateRadixSortAnimationArray(isSorting, array, runAnimation);
       break;
     default:
       break;
@@ -89,4 +110,36 @@ export const sortingAlgorithmsData = {
     averageCase: "O(n log n)",
     bestCase: "O(n log n)",
   },
+  heap: {
+    title: "Bubble Sort",
+    description:
+      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
+    worstCase: "O(n²)",
+    averageCase: "O(n²)",
+    bestCase: "O(n)",
+  },
+  shell: {
+    title: "Bubble Sort",
+    description:
+      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
+    worstCase: "O(n²)",
+    averageCase: "O(n²)",
+    bestCase: "O(n)",
+  },
+  counting: {
+    title: "Bubble Sort",
+    description:
+      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
+    worstCase: "O(n²)",
+    averageCase: "O(n²)",
+    bestCase: "O(n)",
+  },
+  radix: {
+    title: "Bubble Sort",
+    description:
+      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
+    worstCase: "O(n²)",
+    averageCase: "O(n²)",
+    bestCase: "O(n)",
+  }
 };
