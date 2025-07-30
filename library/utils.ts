@@ -81,7 +81,7 @@ export const sortingAlgorithmsData = {
   insertion: {
     title: "Insertion Sort",
     description:
-      "Insertion sort builds the final sorted array one element at a time, by repeatedly taking the next unsorted element and inserting it into its correct position among the previously sorted elements. This process continues until all elements have been inserted into their proper place, resulting in a sorted list.",
+      "Insertion sort builds the final sorted array one element at a time, by repeatedly taking the next unsorted element and inserting it into its correct position among the previously sorted elements.",
     worstCase: "O(n²)",
     averageCase: "O(n²)",
     bestCase: "O(n)",
@@ -89,7 +89,7 @@ export const sortingAlgorithmsData = {
   selection: {
     title: "Selection Sort",
     description:
-      "Selection sort works by repeatedly finding the minimum element from the unsorted portion of the list and swapping it with the element at the current position. This process is continued for each position in the list, moving the boundary of the sorted and unsorted portions one element forward each time until the entire list is sorted.",
+      "Selection sort repeatedly selects the smallest (or largest) element from the unsorted part and moves it to the sorted part, reducing the unsorted region by one each iteration.",
     worstCase: "O(n²)",
     averageCase: "O(n²)",
     bestCase: "O(n²)",
@@ -97,7 +97,7 @@ export const sortingAlgorithmsData = {
   merge: {
     title: "Merge Sort",
     description:
-      "Merge sort divides the unsorted list into n sublists, each containing one element (a list of one element is considered sorted), and then repeatedly merges these sublists to produce new sorted sublists until there is only one sublist remaining, which is the sorted list. This algorithm uses a divide-and-conquer approach, splitting the list in half recursively and merging the sorted halves back together.",
+      "Merge sort is a divide-and-conquer algorithm that divides the list into halves, recursively sorts them, and then merges the sorted halves to produce the final sorted list.",
     worstCase: "O(n log n)",
     averageCase: "O(n log n)",
     bestCase: "O(n log n)",
@@ -105,41 +105,41 @@ export const sortingAlgorithmsData = {
   quick: {
     title: "Quick Sort",
     description:
-      "Quick sort selects a 'pivot' element from the array and partitions the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively, and the sorted sub-arrays are combined with the pivot to form the sorted array.",
+      "Quick sort selects a 'pivot' and partitions the array into elements less than and greater than the pivot. It recursively sorts the subarrays and combines them to get the sorted result.",
     worstCase: "O(n²)",
     averageCase: "O(n log n)",
     bestCase: "O(n log n)",
   },
   heap: {
-    title: "Bubble Sort",
+    title: "Heap Sort",
     description:
-      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
-    worstCase: "O(n²)",
-    averageCase: "O(n²)",
-    bestCase: "O(n)",
+      "Heap sort builds a max heap and repeatedly removes the largest element (the root), placing it at the end of the array. This continues until all elements are sorted.",
+    worstCase: "O(n log n)",
+    averageCase: "O(n log n)",
+    bestCase: "O(n log n)",
   },
   shell: {
-    title: "Bubble Sort",
+    title: "Shell Sort",
     description:
-      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
+      "Shell sort is an optimization of insertion sort that allows the exchange of far-apart elements. It works by sorting elements at specific intervals and reducing the interval over time.",
     worstCase: "O(n²)",
-    averageCase: "O(n²)",
-    bestCase: "O(n)",
+    averageCase: "O(n^1.5)",
+    bestCase: "O(n log n)",
   },
   counting: {
-    title: "Bubble Sort",
+    title: "Counting Sort",
     description:
-      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
-    worstCase: "O(n²)",
-    averageCase: "O(n²)",
-    bestCase: "O(n)",
+      "Counting sort is a non-comparison-based algorithm that counts the frequency of each unique element. It then uses this information to place elements in their correct positions.",
+    worstCase: "O(n + k)",
+    averageCase: "O(n + k)",
+    bestCase: "O(n + k)",
   },
   radix: {
-    title: "Bubble Sort",
+    title: "Radix Sort",
     description:
-      "A simple comparison-based sorting algorithm. Bubble sort repeatedly compares and swaps adjacent elements if they are in the wrong order, moving larger elements towards the end with each pass through the list. This process continues until the list is sorted and no more swaps are needed.",
-    worstCase: "O(n²)",
-    averageCase: "O(n²)",
-    bestCase: "O(n)",
-  }
+      "Radix sort processes the digits of numbers starting from the least significant to the most significant, using a stable sort like counting sort at each digit position.",
+    worstCase: "O(nk)",
+    averageCase: "O(nk)",
+    bestCase: "O(nk)",
+  },
 };
