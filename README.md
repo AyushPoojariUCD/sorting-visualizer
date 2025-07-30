@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sorting Algorithm Visualizer 🔢✨
 
-## Getting Started
+A sleek and interactive Sorting Algorithm Visualizer built with **Next.js 14 (App Router)**, **Tailwind CSS**, and **TypeScript**. Visualize popular sorting algorithms in action with real-time animations and intuitive UI.
 
-First, run the development server:
+🌐 Live Demo: [sorting-visualizer.vercel.app](https://sorting-visualizer-nu-murex.vercel.app)  
+📂 Source Code: [GitHub Repository](https://github.com/AyushPoojariUCD/sorting-visualizer)
+
+---
+
+## 🧠 Features
+
+- Visualizes common sorting algorithms:
+  - Bubble Sort
+  - Insertion Sort
+  - Selection Sort
+  - Merge Sort
+  - Quick Sort
+- Adjustable animation speed
+- Array size slider
+- Reset and replay functionality
+- Responsive UI with Tailwind CSS
+- Built using the modern App Router (`app/`) of Next.js 14
+
+---
+
+## 📁 Project Folder Structure
+```
+sorting-visualizer/
+├── app/                           # Next.js App Router folder
+│   ├── page.tsx                   # Main home page with visualizer
+│   └── globals.css                # Tailwind global styles
+│
+├── components/                    # Reusable UI components
+│   ├── ArrayBar.tsx               # Component for rendering bars
+│   ├── ControlPanel.tsx           # Controls (buttons, sliders, etc.)
+│   └── SpeedSlider.tsx            # Speed control UI
+│
+├── lib/                           # Logic, helpers, and algorithms
+│   ├── algorithms/                # Sorting algorithm implementations
+│   │   ├── bubbleSort.ts
+│   │   ├── insertionSort.ts
+│   │   ├── selectionSort.ts
+│   │   ├── mergeSort.ts
+│   │   └── quickSort.ts
+│   └── utils.ts                   # Utility functions (e.g., delay, shuffle)
+│
+├── public/                        # Static files (if any)
+│   └── favicon.ico
+│
+├── styles/                        # Optional custom CSS (if needed)
+│   └── animations.css             # Bar animation keyframes (optional)
+│
+├── types/                         # TypeScript types
+│   └── index.ts                   # Shared interfaces and types
+│
+├── .gitignore
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+├── next.config.mjs
+└── README.md
+```
+
+---
+
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/AyushPoojariUCD/sorting-visualizer.git
+cd sorting-visualizer
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+
+### 2. Run the project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
